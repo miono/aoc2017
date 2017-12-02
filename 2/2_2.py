@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-import re
-
 f = open('input')
 spreadsheet = []
 result_array = []

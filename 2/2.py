@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-import re
-
 f = open('input')
 spreadsheet = []
 result_array = []
@@ -14,7 +12,6 @@ def find_diff(arr):
   return max(arr) - min(arr)
 
 for arr in spreadsheet:
-  # print arr
   result_array.append(find_diff(arr))
 
 total = 0
