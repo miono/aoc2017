@@ -10,11 +10,11 @@ for line in f.readlines():
 def find_diff(arr):
   arr = map(int, arr)
   for i in arr:
-    for j in xrange(len(arr)):
-      if i == arr[j]:
+    for j in arr:
+      if i == j:
         continue
-      if i % arr[j] == 0:
-        return max([i, arr[j]]) / min([i, arr[j]])
+      if i % j == 0:
+        return max([i, j]) / min([i, j])
 
 
 for arr in spreadsheet:
