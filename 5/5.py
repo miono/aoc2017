@@ -19,6 +19,6 @@ while True:
       jumplist[index] += 1
     index = index + jump
     steps += 1
-  except:
+  except IndexError:
     print steps
     break
