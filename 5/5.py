@@ -11,11 +11,14 @@ index = 0
 
 
 while True:
-  jump = jumplist[index]
-  if jumplist[index] >= 3:
-    jumplist[index] -= 1
-  else:
-    jumplist[index] += 1
-  index = index + jump
-  steps += 1
-  print steps
+  try:
+    jump = jumplist[index]
+    if jumplist[index] >= 3:
+      jumplist[index] -= 1
+    else:
+      jumplist[index] += 1
+    index = index + jump
+    steps += 1
+  except:
+    print steps
+    break
