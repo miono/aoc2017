@@ -1,14 +1,10 @@
 #!/usr/bin/env python
 
 f = open('input')
-
-jumplist = f.readlines()
-
-jumplist = map(int, jumplist)
+jumplist = map(int, f.readlines())
 
 steps = 0
 index = 0
-
 
 while True:
   try:
