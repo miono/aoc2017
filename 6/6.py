@@ -3,15 +3,11 @@
 f = open('input').readlines()[0]
 f = f.split('	')
 cur_bank = map(int, f)
-cycles = 0
-# print f
 
 all_results = []
 all_results.append(cur_bank)
 
 def redistribute(bank_config):
-  global cycles
-  cycles += 1
   m = max(bank_config)
   bank_to_distribute = [i for i, j in enumerate(bank_config) if j == m][0]
   num_steps = bank_config[bank_to_distribute]
@@ -19,8 +15,8 @@ def redistribute(bank_config):
   for x in xrange(num_steps):
     bank_config[(bank_to_distribute + x + 1) % len(bank_config)] += 1
   if bank_config in all_results:
-    print len(all_results)
-    print len(all_results) - all_results.index(bank_config)
+    print "Number of cycles before loop: %i" % (len(all_results))
+    print "Loop-length: %i" % (len(all_results) - all_results.index(bank_config))
     exit()
   return bank_config
 
