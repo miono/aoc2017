@@ -7,6 +7,8 @@ position = [0,0]
 distances = []
 
 def get_distance_for_point(x,y):
+  x = abs(x)
+  y = abs(y)
   return abs(x + (y-x)/2)
 
 for step in steps:
