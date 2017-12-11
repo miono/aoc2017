@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# Using this representation of a hexgrid: https://stackoverflow.com/questions/11373122/best-way-to-store-a-triangular-hexagonal-grid-in-python
+
 steps = open('input').readlines()[0].strip().split(',')
 position = [0,0]
 distances = []
