@@ -3,10 +3,7 @@
 f = open('input')
 
 pipes = f.readlines()
-pipelist = []
-tmpgroup = []
-groups = []
-touched_pipes = []
+pipelist, tmpgroup, groups, touched_pipes = [], [], [], []
 
 for pipe in pipes:
   pipe = pipe.strip().split()
