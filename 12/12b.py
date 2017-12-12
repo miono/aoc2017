@@ -21,11 +21,6 @@ def check_connections(conns):
       touched_pipes.append(i)
       check_connections(pipelist[i][1])
 
-
-check_connections(pipelist[0][1])
-groups.append(tmpgroup)
-tmpgroup = []
-
 for i in xrange(len(pipelist)):
   if i not in touched_pipes:
     check_connections(pipelist[i][1])
