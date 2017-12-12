@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 
-f = open('input')
+pipes = open('input').readlines()
 
-pipes = f.readlines()
 pipelist, tmpgroup, groups, touched_pipes = [], [], [], []
 
 for pipe in pipes:
