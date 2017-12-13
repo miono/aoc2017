@@ -27,11 +27,9 @@ class AOC17_12():
                 self.check_connection(self.pipelist[i][1])
                 self.groups.append(self.tmpgroup)
                 self.tmpgroup = []
-
-    def solution(self):
         return len(self.groups)
 
 
+
 problem = AOC17_12()
-problem.calculate()
-print problem.solution()
+print problem.calculate()
