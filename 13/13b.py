@@ -3,11 +3,15 @@
 f = open('input').readlines()
 delay = 0 
 
+fw = []
+for line in f:
+  fw.append([int(line.strip().split(': ')[0]), int(line.strip().split(': ')[1])])
+
 def gogogo(delay):
   severity = 0
-  for line in f:
-    second = int(line.strip().split(': ')[0]) + delay
-    scanrange = int(line.strip().split(': ')[1])
+  for pair in fw:
+    second = pair[0]+ delay
+    scanrange = pair[1]
     looplength = (scanrange - 1) * 2
     if second % looplength == 0:
       severity = severity + (second * scanrange)
