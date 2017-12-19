@@ -3,14 +3,15 @@
 grid = [[0 for i in xrange(200)] for j in xrange(200)]
 f = open('input').readlines()
 outstring = []
+pos_x = 0
+pos_y = 19
+steps = 0
+direction = 's'
 
 for x, line in enumerate(f):
   line = line.rstrip('\n')
   for y, char in enumerate(line):
     grid[x][y] = char
-
-startpoint = [0,19]
-direction = 's'
 
 def turn(pos_x, pos_y, direction):
   if direction == 's':
@@ -33,10 +34,6 @@ def turn(pos_x, pos_y, direction):
       return 'n'
     if grid[pos_x+1][pos_y] not in [' ', '-']:
       return 's'
-
-pos_x = 0
-pos_y = 19
-steps = 0
 
 while True:
   if grid[pos_x][pos_y] == '+':
