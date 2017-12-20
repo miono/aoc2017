@@ -40,14 +40,14 @@ particles = []
 marked_for_deletion = []
 
 for i, line in enumerate(f):
-   line = line.strip().split(', ')
-   pos = line[0][3:].rstrip('>').split(',')
-   pos = map(int, pos)
-   vel = line[1][3:].rstrip('>').split(',')
-   vel = map(int, vel)
-   acc = line[2][3:].rstrip('>').split(',')
-   acc = map(int, acc)
-   particles.append(Particle(i, pos, vel, acc))
+  line = line.strip().split(', ')
+  pos = line[0][3:].rstrip('>').split(',')
+  pos = map(int, pos)
+  vel = line[1][3:].rstrip('>').split(',')
+  vel = map(int, vel)
+  acc = line[2][3:].rstrip('>').split(',')
+  acc = map(int, acc)
+  particles.append(Particle(i, pos, vel, acc))
 
 for i in xrange(1000):
   remove_colliding(map(Particle.get_position, particles))

@@ -22,14 +22,14 @@ f = open('input').readlines()
 particles = []
 
 for i, line in enumerate(f):
-   line = line.strip().split(', ')
-   pos = line[0][3:].rstrip('>').split(',')
-   pos = map(int, pos)
-   vel = line[1][3:].rstrip('>').split(',')
-   vel = map(int, vel)
-   acc = line[2][3:].rstrip('>').split(',')
-   acc = map(int, acc)
-   particles.append(Particle(i, pos, vel, acc, 0))
+  line = line.strip().split(', ')
+  pos = line[0][3:].rstrip('>').split(',')
+  pos = map(int, pos)
+  vel = line[1][3:].rstrip('>').split(',')
+  vel = map(int, vel)
+  acc = line[2][3:].rstrip('>').split(',')
+  acc = map(int, acc)
+  particles.append(Particle(i, pos, vel, acc, 0))
 
 for i in xrange(5000):
   map(Particle.tick, particles)
