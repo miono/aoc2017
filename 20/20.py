@@ -29,7 +29,7 @@ for i, line in enumerate(f):
   vel = map(int, vel)
   acc = line[2][3:].rstrip('>').split(',')
   acc = map(int, acc)
-  particles.append(Particle(i, pos, vel, acc, 0))
+  particles.append(Particle(i, pos, vel, acc))
 
 for i in xrange(5000):
   map(Particle.tick, particles)
